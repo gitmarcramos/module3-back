@@ -1,0 +1,312 @@
+:root {
+  font-size: 10px;
+  /* -------------------------------- // COLORS ------------------------------- */
+  --background: #FFFCEC;
+  --main: #444444;
+  --grey: #696969;
+  --warning: #FF3434
+;
+}
+
+/* ------------------------------ // Font face ------------------------------ */
+@font-face {
+  font-family: "Chaney";
+  src: url("/fonts/chaney-regular-webfont.ttf") format("ttf"), url("/fonts/chaney-regular-webfont.woff") format("woff"), url("/fonts/chaney-regular-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Archia";
+  src: url("/fonts/archia-regular-webfont.ttf") format("ttf"), url("/fonts/archia-regular-webfont.woff") format("woff"), url("/fonts/archia-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Archia";
+  src: url("/fonts/archia-medium-webfont.ttf") format("ttf"), url("/fonts/archia-medium-webfont.woff") format("woff"), url("/fonts/archia-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Archia";
+  src: url("/fonts/archia-semibold-webfont.ttf") format("ttf"), url("/fonts/archia-semibold-webfont.woff") format("woff"), url("/fonts/archia-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Archia";
+  src: url("/fonts/archia-semibold-webfont.ttf") format("ttf"), url("/fonts/archia-semibold-webfont.woff") format("woff"), url("/fonts/archia-semibold-webfont.woff2") format("woff2");
+  font-weight: 700;
+}
+
+/* ----------------------------- // GENERAL TAGS ---------------------------- */
+body {
+  color: var(--main);
+  background-color: var(--background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a {
+  color: var(--main);
+  padding: .4rem .4rem .4rem 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  width: 8rem;
+}
+
+/* ----------------------------- // DESIGN TAGS ----------------------------- */
+.line-separation {
+  width: 100%;
+  background-color: var(--main);
+  height: .5px;
+}
+
+.title {
+  font-family: "Chaney", Helvetica, sans-serif;
+  font-size: clamp(2.2rem, 5vw, 2.2rem);
+}
+
+.subtitle {
+  font-family: "Archia";
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 2.8rem);
+  line-height: 140%;
+}
+
+.body {
+  font-weight: 400;
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+  font-family: "Archia", Helvetica, sans-serif;
+  line-height: 140%;
+}
+
+.body-bold {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+  line-height: 140%;
+}
+
+.links {
+  font-family: "Archia";
+  font-weight: 400;
+  font-size: clamp(1.4rem, 5vw, 1.6rem);
+  line-height: 100%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.hashtags {
+  font-family: "Archia";
+  font-weight: 600;
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  line-height: 100%;
+  text-decoration: none;
+}
+
+.published-by {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  line-height: 130%;
+}
+
+.published-by-link {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  line-height: 130%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.publication-date {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  line-height: 100%;
+}
+
+.instructions {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  line-height: 140%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.error-message {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  line-height: 100%;
+  color: var(--warning);
+}
+
+.social-links {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.add-btn {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  line-height: 140%;
+}
+
+.suggestion-modal {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  line-height: 140%;
+}
+
+.span-edit {
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  line-height: 140%;
+}
+
+.grey {
+  color: var(--grey);
+}
+
+/* ------------------------------- // Buttons ------------------------------- */
+.button--primary {
+  background-color: var(--main);
+  color: var(--background);
+  cursor: pointer;
+  padding: .8rem 1.8rem;
+  font-family: "Chaney", Helvetica, sans-serif;
+  font-size: clamp(2rem, 5vw, 2.2rem);
+  text-align: center;
+}
+
+.button--add_person {
+  display: inline-block;
+  border: 1px solid var(--main);
+  padding: .4rem .8rem;
+  font-family: "Archia";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  cursor: pointer;
+  margin: 0 0 1.6rem 0;
+}
+
+.button-filter {
+  display: inline-block;
+  cursor: pointer;
+  padding: .8rem 1.2rem;
+  margin-bottom: .4rem;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+  font-family: "Archia", Helvetica, sans-serif;
+  line-height: 100%;
+}
+
+.button-filter--checked {
+  background-color: var(--main);
+  color: var(--background);
+}
+
+.button-filter--unchecked {
+  color: var(--main);
+  border: 1px solid var(--main);
+}
+
+.remove-person {
+  color: var(--background);
+  border-radius: 100px;
+  background-color: var(--grey);
+  border: none;
+  padding: .4rem 2.4rem;
+}
+
+button {
+  border: none;
+}
+
+/* -------------------------------- // Input -------------------------------- */
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.form .input {
+  width: 100%;
+  min-height: 4.8rem;
+  background-color: var(--background);
+  border-width: 0 0 .5px;
+  border-color: var(--main);
+  margin: 1.6rem 0;
+  padding: .4rem;
+  text-indent: 1rem;
+  font-family: "Archia";
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+.form ::-webkit-input-placeholder {
+  font-family: "Archia";
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+.form :-ms-input-placeholder {
+  font-family: "Archia";
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+.form ::-ms-input-placeholder {
+  font-family: "Archia";
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+.form ::placeholder {
+  font-family: "Archia";
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+.form textarea {
+  font-family: "Archia";
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  background-color: var(--background);
+  border: 0.5px solid var(--main);
+  border-radius: .4rem;
+  padding: .4rem;
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+/*# sourceMappingURL=variables.css.map */

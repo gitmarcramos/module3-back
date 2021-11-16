@@ -1,0 +1,70 @@
+#index_page{
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#home-page{
+    padding-bottom: 7rem;
+}
+
+#my_account_page {
+    padding-bottom: 3.2rem;
+
+    h1 {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin-top: 1.8rem;
+    }
+}
+
+#update_account-page{
+    h1{
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        margin: 3.2rem 0;
+    }
+}
+
+#user_page {
+
+    padding-bottom: 7rem;
+    .user_quote_card {
+
+        .main {
+            padding-top: 0;
+        }
+    }
+}
+
+#about_page{
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 3.2rem;
+    h1 {
+        width: 100%;
+        text-align: center;
+        margin: 3.2rem 0;
+    }
+
+    .body-bold{
+        margin-top: 2.4rem
+    }
+
+    ul{
+        padding-left: 3.2rem;
+    }
+
+    li{
+        margin-top: .8rem
+    }
+
+    .sincere{
+        margin-top: 3.2rem;
+    }
+}

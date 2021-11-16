@@ -1,0 +1,77 @@
+#index_page {
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home-page {
+  padding-bottom: 7rem;
+}
+
+#my_account_page {
+  padding-bottom: 3.2rem;
+}
+
+#my_account_page h1 {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1.8rem;
+}
+
+#update_account-page h1 {
+  width: 100%;
+  text-align: center;
+}
+
+#update_account-page button {
+  margin: 3.2rem 0;
+}
+
+#user_page {
+  padding-bottom: 7rem;
+}
+
+#user_page .user_quote_card .main {
+  padding-top: 0;
+}
+
+#about_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 3.2rem;
+}
+
+#about_page h1 {
+  width: 100%;
+  text-align: center;
+  margin: 3.2rem 0;
+}
+
+#about_page .body-bold {
+  margin-top: 2.4rem;
+}
+
+#about_page ul {
+  padding-left: 3.2rem;
+}
+
+#about_page li {
+  margin-top: .8rem;
+}
+
+#about_page .sincere {
+  margin-top: 3.2rem;
+}
+/*# sourceMappingURL=pages.css.map */

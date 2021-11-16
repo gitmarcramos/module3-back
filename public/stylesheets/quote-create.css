@@ -1,0 +1,103 @@
+#quote-create {
+  width: 100%;
+}
+
+#quote-create .instructions {
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+#quote-create input,
+#quote-create textarea {
+  width: 100%;
+  min-height: 3.2rem;
+  background-color: var(--background);
+  border-width: .5px;
+  border-radius: .4rem;
+  border-color: var(--main);
+  margin-bottom: 1.6rem;
+  padding: 1rem;
+  font-family: "Archia";
+  font-size: clamp(1.6rem, 10vw, 1.8rem);
+  overflow: hidden;
+}
+
+#quote-create .ajax_input {
+  width: 100%;
+}
+
+#quote-create .ajax_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 3.2rem;
+  width: 100%;
+}
+
+#quote-create .ajax_form .ajax_form_message_container {
+  width: 100%;
+  padding: 1.2rem;
+  border: 0.5px solid var(--main);
+}
+
+#quote-create .ajax_form .appearMessage {
+  -webkit-animation: messageAppear 300ms ease-in-out;
+          animation: messageAppear 300ms ease-in-out;
+}
+
+@-webkit-keyframes messageAppear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes messageAppear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+#quote-create #ajax-input-hashtag-container {
+  margin-top: .8rem;
+}
+
+#quote-create .button-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#quote-create .button-container .button--add_person {
+  margin-left: auto;
+}
+
+#quote-create .button-container .button--primary {
+  margin: 3.2rem 0 7rem 0;
+}
+/*# sourceMappingURL=quote-create.css.map */
