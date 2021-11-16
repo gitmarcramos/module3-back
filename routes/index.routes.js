@@ -14,7 +14,7 @@ router.get("/home", async function (req, res, next) {
     const listQuotes = await quoteModel
       .find()
       .sort({ dateCreatedAt: -1 })
-      .populate("publisher", "+password +mail")
+      .populate("publisher", "pseudo")
 
     res.status(200).json(listQuotes);
   } catch (err) {
