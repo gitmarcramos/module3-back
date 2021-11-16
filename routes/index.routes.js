@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const quoteModel = require("./../models/Quotes.model");
 
-
-//todo REACT 
+//todo REACT
 /* GET index page. */
 // router.get("/", function (req, res, next) {
 //   res.status(200)
@@ -15,7 +14,7 @@ router.get("/home", async function (req, res, next) {
     const listQuotes = await quoteModel
       .find()
       .sort({ dateCreatedAt: -1 })
-      .populate("publisher");
+      .populate("publisher", "+password +mail")
 
     res.status(200).json(listQuotes);
   } catch (err) {
@@ -23,14 +22,10 @@ router.get("/home", async function (req, res, next) {
   }
 });
 
-
 // todo React Routing
 // router.get("/filter", function (req, res, next) {
 //   res.status(200)
 // });
-
-
-
 
 // todo React Routing
 //GET About Page

@@ -18,12 +18,14 @@ const userSchema = new Schema({
     type: String,
     required: true,
     trim: true,
-    unique: true
+    unique: true,
+    select: false
   },
 
   password: {
     type: String,
-    required: true
+    required: true,
+    select: false,
   },
 
   profilePic: {
