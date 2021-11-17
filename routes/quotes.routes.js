@@ -8,18 +8,6 @@ const protectUserRoute = require("./../middlewares/protectUserRoute");
 //! DO NOT FORGET TO PUT BACK THE PROTECT ROUTE MIDDLEWARE
 
 
-//todo REACT route
-// GET Create quote
-// router.get("/create-quote", (req, res, next) => {
-//   // res.render("partials/quote_create", {
-//   //   script: ["add-person.js", "format-date.js"],
-//   //   css: ["quote-create.css"],
-//   // });
-
-
-//   res.status(200).send("GET ROUTE for create quote");
-// });
-
 /* ----------------------- // POST Route create-quote ----------------------- */
 router.post("/create-quote", async (req, res, next) => {
   try {
