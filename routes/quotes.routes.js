@@ -41,7 +41,7 @@ router.post("/create-quote", async (req, res, next) => {
       quotes: quotes,
       publisher: req.session.currentUser._id,
     };
-    console.log(quotes);
+    // console.log(quotes);
     await quoteModel.create(newQuote);
     res.status(200).json(newQuote);
   } catch (err) {

@@ -74,7 +74,7 @@ router.post("/create-account", protectAuthRoute, fileUploader.single('profilePic
 
     const foundUser = await userModel.findOne({ mail: newUser.mail });
 
-    console.log(newUser);
+    // console.log(newUser);
     if (foundUser) {
       req.flash("warning", "Email already registered");
       res.redirect("/auth/create-account");
@@ -82,7 +82,7 @@ router.post("/create-account", protectAuthRoute, fileUploader.single('profilePic
       const hashedPassword = bcrypt.hashSync(newUser.password[0], 10);
       newUser.password = hashedPassword;
       newUser.creationDate = new Date(Date.now());
-      console.log(newUser);
+      // console.log(newUser);
       await userModel.create(newUser);
       req.flash("success", "Congrats ! You are now registered !");
       res.redirect("/auth/login");

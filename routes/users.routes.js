@@ -22,23 +22,14 @@ router.get("/:pseudo", async (req, res, next) => {
       .find({ publisher: user._id })
       .sort({ dateCreatedAt: -1 })
       .populate("publisher");
-    console.log(user, listQuotes);
+    // console.log(user, listQuotes);
     res.status(200).json({ user, listQuotes });
   } catch (error) {
     next(error);
   }
 });
 
-/* ---------------------- //GET update USER INFOS route --------------------- */
-// router.get("/:pseudo/edit", async (req, res, next) => {
-//   try {
-//     const foundUser = await userModel.findOne({ pseudo: req.params.pseudo });
-//     res.status(200).json(foundUser);
-//   } catch (err) {
-//     console.log(err, "There was an error finding the user to update");
-//   }
-// });
-
+/* ---------------------- //PATCH update USER INFOS route --------------------- */
 router.patch("/:pseudo/edit", async (req, res, next) => {
   try {
     const foundUser = await userModel.findOne({ pseudo: req.params.pseudo });
