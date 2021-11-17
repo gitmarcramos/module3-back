@@ -30,7 +30,16 @@ router.get("/:pseudo", async (req, res, next) => {
 });
 
 /* ---------------------- //GET update USER INFOS route --------------------- */
-router.get("/:pseudo/edit", async (req, res, next) => {
+// router.get("/:pseudo/edit", async (req, res, next) => {
+//   try {
+//     const foundUser = await userModel.findOne({ pseudo: req.params.pseudo });
+//     res.status(200).json(foundUser);
+//   } catch (err) {
+//     console.log(err, "There was an error finding the user to update");
+//   }
+// });
+
+router.patch("/:pseudo/edit", async (req, res, next) => {
   try {
     const foundUser = await userModel.findOne({ pseudo: req.params.pseudo });
     res.status(200).json(foundUser);
