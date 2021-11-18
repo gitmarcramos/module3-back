@@ -75,9 +75,9 @@ app.use("/api/quotes", quoteRouter)
 // });
 
 // To handle
-// app.use("/*", (req, res, next) => {
-//   res.redirect("/")
-// })
+app.use("/*", (req, res, next) => {
+  res.redirect("/")
+})
 
 
 /* -------------------------------------------------------------------------- */
