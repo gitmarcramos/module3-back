@@ -77,6 +77,9 @@ app.use("/*", (req, res, next) => {
 })
 
 
+/* -------------------------------------------------------------------------- */
+/*                                      DEPLOY STUFF                          */
+/* -------------------------------------------------------------------------- */
 // 404 Middleware
 app.use("/api/*", (req, res, next) => {  
   const error = new Error("Ressource not found.");
@@ -90,6 +93,11 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "public/build/index.html"));
   });
 }
+/* -------------------------------------------------------------------------- */
+/*                                      DEPLOY STUFF                          */
+/* -------------------------------------------------------------------------- */
+
+
 
 
 // SESSION SETUP
