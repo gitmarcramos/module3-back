@@ -70,14 +70,14 @@ app.use("/api/users", usersRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/filter", filterRouter);
 app.use("/api/quotes", quoteRouter)
-app.use("/", function (req, res, next) {
-  res.redirect('/api/home')
-});
+// app.use("/", function (req, res, next) {
+//   res.redirect('/api/home')
+// });
 
 // To handle
-app.use("/*", (req, res, next) => {
-  res.redirect("/")
-})
+// app.use("/*", (req, res, next) => {
+//   res.redirect("/")
+// })
 
 
 /* -------------------------------------------------------------------------- */
