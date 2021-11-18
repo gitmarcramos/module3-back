@@ -71,7 +71,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/filter", filterRouter);
 app.use("/api/quotes", quoteRouter)
 app.use("/", function (req, res, next) {
-  res.status(200).json("Server is running, use /api/home to get data")
+  res.redirect('/api/home')
 });
 
 // To handle
