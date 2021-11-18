@@ -29,18 +29,18 @@ router.get("/:pseudo", async (req, res, next) => {
   }
 });
 
-/* ---------------------- //PATCH update USER INFOS route --------------------- */
-router.patch("/:pseudo/edit", async (req, res, next) => {
-  try {
-    const foundUser = await userModel.findOne({ pseudo: req.params.pseudo });
-    res.status(200).json(foundUser);
-  } catch (err) {
-    console.log(err, "There was an error finding the user to update");
-  }
-});
+/* ---------------------- //FO --------------------- */
+// router.get("/:pseudo/edit", async (req, res, next) => {
+//   try {
+//     const foundUser = await userModel.findOne({ pseudo: req.params.pseudo });
+//     res.status(200).json(foundUser);
+//   } catch (err) {
+//     console.log(err, "There was an error finding the user to update");
+//   }
+// });
 
 /* --------------------- // POST update USER INFOS route -------------------- */
-router.post(
+router.patch(
   "/:pseudo/edit",
   fileUploader.single("profilePic"),
   async (req, res, next) => {
