@@ -71,13 +71,13 @@ app.use("/api/auth", authRouter);
 app.use("/api/filter", filterRouter);
 app.use("/api/quotes", quoteRouter)
 app.use("/", function (req, res, next) {
-  res.redirect('/api/home')
+  res.send('Server running')
 });
 
 // To handle
-app.use("/*", (req, res, next) => {
-  res.redirect("/")
-})
+// app.use("/*", (req, res, next) => {
+//   res.redirect("/")
+// })
 
 
 /* -------------------------------------------------------------------------- */
