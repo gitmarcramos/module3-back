@@ -1,6 +1,7 @@
 require("dotenv").config();
 require("./config/mongodb");
 require("./config/cloudinary");
+require("./config/passport");
 const createError = require("http-errors");
 const express = require("express");
 const mongoose = require("mongoose");
@@ -12,6 +13,8 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const hbs = require("hbs");
 const flash = require("connect-flash");
+const passport = require("passport")
+const _DEVMODE = false;
 
 
 const app = express();
@@ -31,6 +34,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+const corsOptions = {
+  origin: [process.env.CLIENT_URL],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -44,14 +55,31 @@ app.use(
   })
 );
 
-const corsOptions = {
-  origin: [process.env.CLIENT_URL],
-  credentials: true,
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
+app.use(passport.initialize());
+app.use(passport.session());
 
+//------------------------------------------
+// Check Loggedin Users
+// ------------------------------------------
+if (_DEVMODE === true) {
+  app.use(function devMode(req, res, next) {
+    req.user = {
+      _id: "61962d33381b350c4f8b4967",
+      pseudo: "MarcWeb",
+      name: "Marc",
+      mail: "marc@mail.com",
+      avatar:
+        "https://res.cloudinary.com/awesome-quotes/image/upload/v1635413379/samples/Awesome%20quotes/default_profile_image_e7mvln.png",
+      role: "admin",
+      followers: [],
+      following: [],
+      likes: [],
+      favorites: []
+    };
 
+    next();
+  });
+}
 
 app.use(flash());
 
