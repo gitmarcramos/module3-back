@@ -4,9 +4,9 @@ const quoteModel = require("./../models/Quotes.model");
 
 //todo REACT
 /* GET index page. */
-// router.get("/", function (req, res, next) {
-//   res.status(200)
-// });
+router.get("/", function (req, res, next) {
+  res.status(200).json("Server is running, use /api/home to get data")
+});
 
 /* ---------------------------- // GET home page ---------------------------- */
 router.get("/home", async function (req, res, next) {
