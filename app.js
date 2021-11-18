@@ -64,16 +64,15 @@ const authRouter = require("./routes/auth.routes");
 const filterRouter = require("./routes/filter.routes");
 const quoteRouter = require("./routes/quotes.routes")
 
-app.use("/", function (req, res, next) {
-  res.status(200).json("Server is running, use /api/home to get data")
-});
 
 app.use("/api", indexRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/filter", filterRouter);
 app.use("/api/quotes", quoteRouter)
-
+app.use("/", function (req, res, next) {
+  res.status(200).json("Server is running, use /api/home to get data")
+});
 
 // To handle
 app.use("/*", (req, res, next) => {
