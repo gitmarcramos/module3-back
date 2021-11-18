@@ -29,7 +29,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public/build")));
+app.use(express.static(path.join(__dirname, "public/dist")));
 
 app.use(
   session({
@@ -70,14 +70,14 @@ app.use("/api/users", usersRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/filter", filterRouter);
 app.use("/api/quotes", quoteRouter)
-app.use("/", function (req, res, next) {
-  res.send('Server running')
-});
+// app.use("/", function (req, res, next) {
+//   res.redirect('/api/home')
+// });
 
 // To handle
-// app.use("/*", (req, res, next) => {
-//   res.redirect("/")
-// })
+app.use("/*", (req, res, next) => {
+  res.redirect("/")
+})
 
 
 /* -------------------------------------------------------------------------- */
