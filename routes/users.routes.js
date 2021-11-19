@@ -8,16 +8,16 @@ const fileUploader = require("./../config/cloudinary");
 //! DO NOT FORGET TO PUT BACK THE PROTECT ROUTE MIDDLEWARE
 
 /* ------------------------------ // GET users ------------------------------ */
-router.get("/", (req, res, next) => {
-  //todo REACT ROUTING
-});
+// router.get("/", (req, res, next) => {
+//   //todo REACT ROUTING
+// });
 
 /* ----------------------------- //GET ONE USER ----------------------------- */
 router.get("/:pseudo", async (req, res, next) => {
   try {
     const user = await userModel.findOne({
       pseudo: { $regex: new RegExp(req.params.pseudo, "i") },
-    });
+    }).select('+mail');
     const listQuotes = await quoteModel
       .find({ publisher: user._id })
       .sort({ dateCreatedAt: -1 })
